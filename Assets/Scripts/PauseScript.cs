@@ -6,7 +6,7 @@ public class PauseScript : MonoBehaviour
 {
 
 
-    bool Pause = false;
+  //  bool Pause = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,14 +29,14 @@ public class PauseScript : MonoBehaviour
 
             Time.timeScale = 0;
 
-            Pause = true;
+           // Pause = true;
         }
 
 
        if ( Input.GetMouseButton(1) & Time.timeScale == 0)
         {
             Time.timeScale = 1;
-            Pause = false;
+          //  Pause = false;
         }
         }
 
