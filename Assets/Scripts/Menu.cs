@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
-    Button button;
-    // private GameObject g;
-    private GameObject h;
+    
+ 
 
 
 
@@ -15,7 +14,7 @@ public class Menu : MonoBehaviour
 
     public void LoadFirstLevel()
     {
-        SceneManager.LoadScene("Tetris");
+        SceneManager.LoadSceneAsync(1);
         DontDestroyOnLoad(gameObject);
        
 
@@ -47,12 +46,7 @@ public class Menu : MonoBehaviour
     }
 
 
-    public void QuitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-    }
+   
 
 
 }

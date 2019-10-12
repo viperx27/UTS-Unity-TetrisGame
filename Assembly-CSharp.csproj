@@ -63,6 +63,8 @@
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\PauseScript.cs" />
     <Compile Include="Assets\Scripts\Quit.cs" />
+    <Compile Include="Assets\Scripts\Resume.cs" />
+    <Compile Include="Assets\Scripts\Scene1.cs" />
     <Compile Include="Assets\Scripts\TetrisCode.cs" />
     <Compile Include="Assets\Scripts\Tetrominion.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

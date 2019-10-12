@@ -15,16 +15,22 @@ public class Quit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            Quitgame();
-        }
-    }
 
+
+       
+    }
     public void Quitgame()
     {
+       
+
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+
+
+#if UNITY_STANDALONE
+           Application.Quit();
+
 #endif
 
         
