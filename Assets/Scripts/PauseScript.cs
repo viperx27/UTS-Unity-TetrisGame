@@ -22,24 +22,21 @@ public class PauseScript : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetMouseButton(0) & Time.timeScale == 1)
+        
+    }
+       
+    public void pausegame()
+    {
+        Pause = !Pause;
+        if (Pause)
         {
-
-
             Time.timeScale = 0;
-
-            Pause = true;
         }
-
-
-       if ( Input.GetMouseButton(1) & Time.timeScale == 0)
+        else if (!Pause)
         {
             Time.timeScale = 1;
-            Pause = false;
         }
-        }
-
+    }
 
 
 

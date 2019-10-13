@@ -21,20 +21,20 @@ public class TetrisCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if(Input.GetKeyDown(KeyCode.LeftArrow) | Input.GetKeyDown(KeyCode.A))
         {
             transform.position += new Vector3(-1, 0, 0);
             
             if(!ValidMove())
                 transform.position -= new Vector3(-1, 0, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) | Input.GetKeyDown(KeyCode.D))
         {
             transform.position += new Vector3(1, 0, 0);
             if (!ValidMove())
                 transform.position -= new Vector3(1, 0, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) | Input.GetKeyDown(KeyCode.W))
         {
             //rotate in up position
             transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0,0,1), 90);
@@ -43,7 +43,7 @@ public class TetrisCode : MonoBehaviour
         }
 
 
-        if (Time.time - backpoint > (Input.GetKey(KeyCode.DownArrow) ? droptime / 10 : droptime))
+        if (Time.time - backpoint > (Input.GetKey(KeyCode.DownArrow) | (Input.GetKeyDown(KeyCode.S)) ? droptime / 10 : droptime))
         {
             transform.position += new Vector3(0, -1, 0);
 
